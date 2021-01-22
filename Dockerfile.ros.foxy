@@ -55,6 +55,7 @@ RUN apt-get update && \
 		libasio-dev \
 		libtinyxml2-dev \
 		libcunit1-dev \
+		libboost-all-dev nvidia-opencv libopencv-python \
 		librealsense2 librealsense2-utils librealsense2-udev-rules \
     && rm -rf /var/lib/apt/lists/*
 

@@ -31,7 +31,7 @@ RUN wget --no-check-certificate https://raw.githubusercontent.com/ros/rosdistro/
 RUN sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
 
 RUN apt-key adv --fetch-key https://repo.download.nvidia.com/jetson/jetson-ota-public.asc
-RUN sh -c 'echo "deb https://repo.download.nvidia.com/jetson/common r32.4 main\ndeb https://repo.download.nvidia.com/jetson/t210 r32.4 main" > /etc/apt/source.list.d/nvidia-l4t-apt-source.lit'
+RUN sh -c 'echo "deb https://repo.download.nvidia.com/jetson/common r32.4 main\ndeb https://repo.download.nvidia.com/jetson/t210 r32.4 main" > /etc/apt/sources.list.d/nvidia-l4t-apt-source.list'
 
 RUN apt-key adv --keyserver keys.gnupg.net --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
 RUN add-apt-repository "deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo bionic main" -u
